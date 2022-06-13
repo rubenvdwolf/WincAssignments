@@ -1,21 +1,33 @@
 # Do not modify these lines
-__winc_id__ = '71dd124b4a6e4d268f5973db521394ee'
-__human_name__ = 'strings'
+__winc_id__ = '7b9401ad7f544be2a23321292dd61cb6'
+__human_name__ = 'arguments'
 
 # Add your code after this line
-scorer_0 = "Ruud Gullit"
-scorer_1 = "Marco van Basten"
 
-goal_0 = 32
-goal_1 = 54
+# Part 1: Greet Template
 
-scorers = scorer_0 + " " + str(goal_0) + ", " + scorer_1 + " " + str(goal_1)
 
-report = f"{scorer_0} scored in the {goal_0}nd minute\n{scorer_1} scored in the {goal_1}th minute"
+def greet(name, greeting_template='Hello, <name>!'):
+    return greeting_template.replace('<name>', name)
 
-player = "Hans van Breukelen"
-first_name = player[:player.find(" ")]
-last_name_len = len(player[player.find(" "):-1])
-name_short = first_name[0] + "." + player[player.find(" "):]
-chant = ((len(first_name) - 1) * (first_name + "! ")) + (first_name + "!")
-good_chant = chant[-1] != " "
+
+def force(mass, body='earth'):
+    planets = {
+        'sun': 274.0,
+        'jupiter':	24.9,
+        'neptune':	11.2,
+        'saturn':	10.4,
+        'earth':	9.8,
+        'uranus':	8.9,
+        'venus':	8.9,
+        'mars':	3.7,
+        'mercury':	3.7,
+        'moon':	1.6,
+        'pluto':	0.6
+    }
+    force = planets[body] * mass
+    return force
+
+
+def pull(m1, m2, d):
+    return (6.674 * 10**-11) * ((m1 * m2) / d**2)
