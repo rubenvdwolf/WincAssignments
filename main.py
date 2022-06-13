@@ -4,9 +4,6 @@ __human_name__ = 'arguments'
 
 # Add your code after this line
 
-# Part 1: Greet Template
-
-
 def greet(name, greeting_template='Hello, <name>!'):
     return greeting_template.replace('<name>', name)
 
